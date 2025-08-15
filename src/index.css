@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@source inline("max-w-screen-{sm,md,lg,xl,2xl}");
+@source inline("grid-cols-{1..25}");
+
+@theme {
+  --color-background: #B800FF;
+  --color-primary: #B800FF;
+  --color-primary-dark: #9521d5;
+  --color-primary-light: #C02EFF;
+  --color-primary-foreground: #000000;
+  --color-secondary: #13FF00;
+  --font-header: 'Kablammo Variable', system-ui;
+  --font-sans: 'Roboto';
+}
+
+canvas {
+  @apply rounded-xl;
+}
+
+@font-face {
+  font-family: 'Kablammo Variable';
+  src: url("./assets/Kablammo_MORF.ttf");
+}
+
+
+@utility font-header-animate {
+  font-family: 'Kablammo Variable', system-ui;
+  font-variation-settings: 'MORF' 0;
+  animation: font-header-animate-keyframes 2s ease-in-out infinite alternate;
+}
+
+@utility loading-img {
+  @apply bg-primary;
+  animation: loading-img-keyframes 1s ease-in-out infinite alternate;
+}
+
+@keyframes loading-img-keyframes {
+  0% {
+    background-color: var(--color-primary);
+  }
+  100% {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+
+@keyframes font-header-animate-keyframes {
+  0% {
+    font-variation-settings: 'MORF' 0;
+  }
+  100% {
+    font-variation-settings: 'MORF' 60;
+  }
+}
