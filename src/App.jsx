@@ -120,7 +120,7 @@ function App() {
       <FaLinkedin onClick={()=>{window.open("http://www.linkedin.com/in/timo-aranjo-83ab05237", "_blank")}} className="cursor-pointer" size="70px"/>
     </EqualColumns>
   
-  <Download ref={downloadRef} fileLocation="/Resume_8_11_2025.pdf" downloadName="Resume.pdf"/>
+  <Download ref={downloadRef} fileLocation="/Resume_One_Page_8_15_2025.pdf" downloadName="Resume.pdf"/>
   </Container>
   );
 }
